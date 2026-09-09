@@ -1,0 +1,439 @@
+/* Red Stain Press — shared styles */
+
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500;600;700&family=Red+Hat+Display:ital,wght@0,400;0,500;0,600;0,700;1,500&display=swap');
+
+:root {
+  --ink-indigo: #121212;      /* Midnight Ink */
+  --ink-indigo-deep: #0A0A0A; /* Midnight Ink, deeper for gradients */
+  --plum: #f59aa8;            /* Blush Coral */
+  --plum-deep: #9B0000;       /* Crimson Stain */
+  --cream: #F9F6F0;           /* Cream Parchment */
+  --soft-white: #FBFAF7;
+  --gold: #9B0000;            /* Crimson Stain, standing in for prior gold-accent role */
+  --charcoal: #121212;        /* Midnight Ink */
+  --charcoal-soft: #5C4A56;   /* Dusty Mauve */
+
+  --font-display: 'Quicksand', system-ui, sans-serif;
+  --font-body: 'Red Hat Display', system-ui, sans-serif;
+
+  --max-line: 62ch;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  color: var(--charcoal);
+  background: var(--soft-white);
+  line-height: 1.6;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+}
+
+a { color: inherit; }
+
+img, svg { max-width: 100%; display: block; }
+
+/* ---------- Nav ---------- */
+
+.site-nav {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.75rem clamp(1.5rem, 5vw, 4rem);
+}
+
+.site-nav.on-light {
+  position: static;
+  border-bottom: 1px solid rgba(18, 18, 18, 0.08);
+}
+
+.nav-mark {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.15rem;
+  letter-spacing: 0.01em;
+  text-decoration: none;
+  color: inherit;
+}
+
+.nav-mark img {
+  height: 28px;
+  width: auto;
+  display: block;
+}
+
+.nav-links {
+  display: flex;
+  gap: clamp(1.25rem, 3vw, 2.25rem);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-size: 0.95rem;
+}
+
+.nav-links a {
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  padding-bottom: 2px;
+  transition: border-color 0.2s ease;
+}
+
+.nav-links a:hover,
+.nav-links a[aria-current="page"] {
+  border-color: currentColor;
+}
+
+.on-light .nav-links a { color: var(--charcoal-soft); }
+.on-light .nav-links a[aria-current="page"] { color: var(--charcoal); }
+
+/* ---------- Hero (home) ---------- */
+
+.hero {
+  position: relative;
+  min-height: 100svh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(120% 90% at 50% 0%, var(--ink-indigo) 0%, var(--ink-indigo-deep) 65%);
+  color: var(--cream);
+  overflow: hidden;
+  padding: 6rem 1.5rem 4rem;
+  text-align: center;
+}
+
+.hero-stamp {
+  position: relative;
+  z-index: 1;
+  width: 120px;
+  height: auto;
+  margin: 0 auto 1.75rem;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+.hero-eyebrow {
+  font-size: 0.9rem;
+  color: var(--plum);
+  margin: 0 0 1rem;
+}
+
+.hero h1 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: clamp(2.75rem, 7vw, 4.75rem);
+  line-height: 1.05;
+  margin: 0 0 1.25rem;
+}
+
+.hero h1 em {
+  font-style: italic;
+  font-weight: 500;
+  color: var(--plum);
+}
+
+.hero p.lede {
+  font-size: 1.15rem;
+  color: rgba(249, 246, 240, 0.85);
+  max-width: 46ch;
+  margin: 0 auto 2.5rem;
+}
+
+.signup-form {
+  display: flex;
+  gap: 0.6rem;
+  max-width: 420px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.signup-form input[type="email"] {
+  flex: 1 1 240px;
+  padding: 0.85rem 1.1rem;
+  border-radius: 999px;
+  border: 1px solid rgba(249, 246, 240, 0.3);
+  background: rgba(249, 246, 240, 0.08);
+  color: var(--cream);
+  font-family: var(--font-body);
+  font-size: 1rem;
+}
+
+.signup-form input[type="email"]::placeholder { color: rgba(249, 246, 240, 0.55); }
+
+.signup-form input[type="email"]:focus-visible,
+.btn:focus-visible,
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 3px;
+}
+
+.btn {
+  padding: 0.85rem 1.6rem;
+  border-radius: 999px;
+  border: none;
+  background: var(--plum);
+  color: var(--ink-indigo-deep);
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.btn:hover { background: var(--gold); }
+.btn:active { transform: scale(0.97); }
+
+.form-note {
+  margin-top: 0.9rem;
+  font-size: 0.85rem;
+  color: rgba(249, 246, 240, 0.6);
+  min-height: 1.2em;
+}
+
+.form-note.success { color: var(--plum); }
+
+/* ---------- Generic page sections ---------- */
+
+.page-header {
+  padding: 5rem clamp(1.5rem, 6vw, 5rem) 2.5rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.page-header .kicker {
+  color: var(--plum-deep);
+  font-size: 0.95rem;
+  margin: 0 0 0.75rem;
+}
+
+.page-header h1 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: clamp(2.25rem, 5vw, 3.25rem);
+  margin: 0 0 1rem;
+  line-height: 1.1;
+}
+
+.page-header p.lede {
+  font-size: 1.15rem;
+  color: var(--charcoal-soft);
+  max-width: var(--max-line);
+  margin: 0;
+}
+
+.content-section {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 clamp(1.5rem, 6vw, 5rem) 3rem;
+}
+
+.content-section p {
+  max-width: var(--max-line);
+}
+
+.content-section h2 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 1.6rem;
+  margin: 2.5rem 0 1rem;
+}
+
+.pull-quote {
+  border-left: 3px solid var(--gold);
+  margin: 2.5rem 0;
+  padding: 0.25rem 0 0.25rem 1.5rem;
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 1.35rem;
+  color: var(--charcoal);
+  max-width: var(--max-line);
+}
+
+/* Tag list for genres/themes — not a sequence, so no numbering */
+.tag-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  list-style: none;
+  padding: 0;
+  margin: 1.5rem 0 2.5rem;
+}
+
+.tag-list li {
+  background: var(--cream);
+  border: 1px solid rgba(155, 0, 0, 0.35);
+  color: var(--charcoal-soft);
+  padding: 0.45rem 1rem;
+  border-radius: 999px;
+  font-size: 0.9rem;
+}
+
+/* Submission steps — this genuinely is a sequence */
+.step-list {
+  list-style: none;
+  padding: 0;
+  margin: 2rem 0;
+  counter-reset: step;
+}
+
+.step-list li {
+  counter-increment: step;
+  position: relative;
+  padding: 0 0 1.75rem 3rem;
+  border-left: 1px solid rgba(18, 18, 18, 0.12);
+  margin-left: 0.9rem;
+}
+
+.step-list li:last-child { border-left-color: transparent; padding-bottom: 0; }
+
+.step-list li::before {
+  content: counter(step);
+  position: absolute;
+  left: -0.9rem;
+  top: 0;
+  width: 1.8rem;
+  height: 1.8rem;
+  background: var(--ink-indigo);
+  color: var(--cream);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-display);
+  font-size: 0.9rem;
+}
+
+.step-list h3 {
+  margin: 0 0 0.4rem;
+  font-size: 1.1rem;
+}
+
+.step-list p { margin: 0; }
+
+.checklist {
+  padding: 0;
+  margin: 1.5rem 0;
+  list-style: none;
+}
+
+.checklist li {
+  padding-left: 1.6rem;
+  position: relative;
+  margin-bottom: 0.6rem;
+  max-width: var(--max-line);
+}
+
+.checklist li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.5em;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--plum-deep);
+}
+
+.cta-band {
+  background: var(--ink-indigo);
+  color: var(--cream);
+  padding: 3.5rem clamp(1.5rem, 6vw, 5rem);
+  text-align: center;
+  margin-top: 3rem;
+}
+
+.cta-band h2 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 1.9rem;
+  margin: 0 0 0.75rem;
+}
+
+.cta-band p {
+  color: rgba(249, 246, 240, 0.8);
+  max-width: 46ch;
+  margin: 0 auto 1.75rem;
+}
+
+.cta-band .btn { background: var(--plum); color: var(--ink-indigo-deep); }
+.cta-band .btn:hover { background: var(--gold); }
+
+footer {
+  padding: 2.5rem clamp(1.5rem, 6vw, 5rem);
+  text-align: center;
+  color: var(--charcoal-soft);
+  font-size: 0.85rem;
+}
+
+.footer-links {
+  display: flex;
+  gap: 1.25rem;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+  margin: 0 0 0.75rem;
+}
+
+.footer-links a { text-decoration: none; }
+.footer-links a:hover { text-decoration: underline; }
+
+/* ---------- Contact form (submissions page) ---------- */
+
+.submit-form {
+  max-width: 560px;
+  margin: 2.5rem 0;
+  display: grid;
+  gap: 1.1rem;
+}
+
+.field label {
+  display: block;
+  font-weight: 700;
+  font-size: 0.9rem;
+  margin-bottom: 0.4rem;
+}
+
+.field input,
+.field select,
+.field textarea {
+  width: 100%;
+  padding: 0.75rem 0.9rem;
+  border-radius: 10px;
+  border: 1px solid rgba(18, 18, 18, 0.2);
+  font-family: var(--font-body);
+  font-size: 1rem;
+  background: var(--soft-white);
+}
+
+.field textarea { min-height: 120px; resize: vertical; }
+
+.field-hint {
+  font-size: 0.82rem;
+  color: var(--charcoal-soft);
+  margin-top: 0.35rem;
+}
+
+@media (max-width: 640px) {
+  .site-nav { flex-direction: column; align-items: flex-start; gap: 0.75rem; }
+  .site-nav.on-light { align-items: center; text-align: center; }
+}
