@@ -51,11 +51,13 @@ img, svg { max-width: 100%; display: block; }
   align-items: center;
   justify-content: space-between;
   padding: 1.75rem clamp(1.5rem, 5vw, 4rem);
+  color: var(--cream);
 }
 
 .site-nav.on-light {
   position: static;
   border-bottom: 1px solid rgba(18, 18, 18, 0.08);
+  color: var(--charcoal);
 }
 
 .nav-mark {
