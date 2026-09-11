@@ -290,9 +290,9 @@ button:focus-visible {
 }
 
 .tag-list li {
-  background: var(--cream);
-  border: 1px solid rgba(155, 0, 0, 0.35);
-  color: var(--charcoal-soft);
+  background: var(--plum-deep);
+  border: 1px solid var(--plum-deep);
+  color: var(--cream);
   padding: 0.45rem 1rem;
   border-radius: 999px;
   font-size: 0.9rem;
