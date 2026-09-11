@@ -10,6 +10,7 @@
   --cream: #F9F6F0;           /* Cream Parchment */
   --soft-white: #FBFAF7;
   --gold: #9B0000;            /* Crimson Stain, standing in for prior gold-accent role */
+  --crimson-hover: #7A0000;   /* darker shade for hover states on crimson buttons */
   --charcoal: #121212;        /* Midnight Ink */
   --charcoal-soft: #5C4A56;   /* Dusty Mauve */
 
@@ -134,7 +135,7 @@ img, svg { max-width: 100%; display: block; }
 
 .hero-eyebrow {
   font-size: 0.9rem;
-  color: var(--plum);
+  color: var(--plum-deep);
   margin: 0 0 1rem;
 }
 
@@ -149,7 +150,7 @@ img, svg { max-width: 100%; display: block; }
 .hero h1 em {
   font-style: italic;
   font-weight: 500;
-  color: var(--plum);
+  color: var(--plum-deep);
 }
 
 .hero p.lede {
@@ -193,7 +194,7 @@ button:focus-visible {
   padding: 0.85rem 1.6rem;
   border-radius: 999px;
   border: none;
-  background: var(--plum);
+  background: var(--plum-deep);
   color: var(--ink-indigo-deep);
   font-family: var(--font-body);
   font-weight: 700;
@@ -202,7 +203,7 @@ button:focus-visible {
   transition: background 0.2s ease, transform 0.2s ease;
 }
 
-.btn:hover { background: var(--gold); }
+.btn:hover { background: var(--crimson-hover); }
 .btn:active { transform: scale(0.97); }
 
 .form-note {
@@ -212,7 +213,7 @@ button:focus-visible {
   min-height: 1.2em;
 }
 
-.form-note.success { color: var(--plum); }
+.form-note.success { color: var(--plum-deep); }
 
 /* ---------- Generic page sections ---------- */
 
@@ -377,8 +378,8 @@ button:focus-visible {
   margin: 0 auto 1.75rem;
 }
 
-.cta-band .btn { background: var(--plum); color: var(--ink-indigo-deep); }
-.cta-band .btn:hover { background: var(--gold); }
+.cta-band .btn { background: var(--plum-deep); color: var(--ink-indigo-deep); }
+.cta-band .btn:hover { background: var(--crimson-hover); }
 
 footer {
   padding: 2.5rem clamp(1.5rem, 6vw, 5rem);
