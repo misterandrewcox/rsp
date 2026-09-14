@@ -45,6 +45,18 @@ footer {
 
 a { color: inherit; }
 
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
 img, svg { max-width: 100%; display: block; }
 
 /* ---------- Nav ---------- */
@@ -221,6 +233,9 @@ button:focus-visible {
 }
 
 .form-note.success { color: var(--plum-deep); }
+.form-note.error { color: var(--charcoal-soft); font-weight: 600; }
+
+#submission-note { color: var(--charcoal-soft); }
 
 /* ---------- Generic page sections ---------- */
 
