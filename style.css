@@ -477,3 +477,33 @@ footer {
   .nav-brand img { width: 205px; }
   .site-nav.on-light { align-items: center; text-align: center; }
 }
+
+
+/* Brand asset pack integration */
+.nav-mark {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.7rem;
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 1.15rem;
+  text-decoration: none;
+  color: inherit;
+}
+.nav-mark img {
+  width: 34px;
+  height: 34px;
+  object-fit: contain;
+}
+.nav-brand {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+}
+.nav-brand img {
+  width: clamp(150px, 18vw, 220px);
+  height: auto;
+}
+.hero-stamp {
+  width: 96px;
+}
