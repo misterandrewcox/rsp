@@ -1,6 +1,6 @@
 /* Red Stain Press — shared styles */
 
-@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,400;0,500;0,600;0,700;1,500;1,600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500;600;700&family=Red+Hat+Display:ital,wght@0,400;0,500;0,600;0,700;1,500&display=swap');
 
 :root {
   --ink-indigo: #121212;      /* Midnight Ink */
@@ -14,7 +14,7 @@
   --charcoal: #121212;        /* Midnight Ink */
   --charcoal-soft: #5C4A56;   /* Dusty Mauve */
 
-  --font-display: 'Red Hat Display', system-ui, sans-serif;
+  --font-display: 'Quicksand', system-ui, sans-serif;
   --font-body: 'Red Hat Display', system-ui, sans-serif;
 
   --max-line: 62ch;
@@ -80,15 +80,26 @@ img, svg { max-width: 100%; display: block; }
   color: var(--charcoal);
 }
 
-.nav-brand {
+.nav-mark {
   display: inline-flex;
+  flex-direction: row;
   align-items: center;
+  flex-wrap: nowrap;
+  white-space: nowrap;
+  gap: 0.6rem;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.15rem;
+  line-height: 1;
+  letter-spacing: 0.01em;
   text-decoration: none;
+  color: inherit;
 }
 
-.nav-brand img {
-  width: clamp(180px, 18vw, 245px);
-  height: auto;
+.nav-mark img {
+  flex: 0 0 auto;
+  height: 28px;
+  width: auto;
   display: block;
 }
 
@@ -146,27 +157,10 @@ img, svg { max-width: 100%; display: block; }
   margin: 0 auto;
 }
 
-.hero-eyebrow-wrap {
-  width: min(230px, 60vw);
-  margin: 0 auto -1.95rem;
-  opacity: 0.95;
-  pointer-events: none;
-}
-
-.hero-eyebrow-wrap img {
-  width: 100%;
-  height: auto;
-}
-
 .hero-eyebrow {
-  position: relative;
-  z-index: 1;
-  font-size: 0.86rem;
-  font-weight: 600;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--cream);
-  margin: 0 0 1.35rem;
+  font-size: 0.9rem;
+  color: var(--plum-deep);
+  margin: 0 0 1rem;
 }
 
 .hero h1 {
@@ -225,7 +219,7 @@ button:focus-visible {
   border-radius: 999px;
   border: none;
   background: var(--plum-deep);
-  color: var(--cream);
+  color: var(--ink-indigo-deep);
   font-family: var(--font-body);
   font-weight: 700;
   font-size: 1rem;
@@ -235,7 +229,6 @@ button:focus-visible {
 
 .btn:hover { background: var(--crimson-hover); }
 .btn:active { transform: scale(0.97); }
-.btn:disabled { opacity: 0.6; cursor: wait; transform: none; }
 
 .form-note {
   margin-top: 0.9rem;
@@ -245,9 +238,7 @@ button:focus-visible {
 }
 
 .form-note.success { color: var(--plum-deep); }
-.form-note.error { color: #F2A7A7; font-weight: 600; }
-
-#submission-note.error { color: var(--charcoal-soft); }
+.form-note.error { color: var(--charcoal-soft); font-weight: 600; }
 
 #submission-note { color: var(--charcoal-soft); }
 
@@ -308,7 +299,6 @@ button:focus-visible {
   max-width: var(--max-line);
 }
 
-/* Tag list for genres/themes — not a sequence, so no numbering */
 .tag-list {
   display: flex;
   flex-wrap: wrap;
@@ -327,7 +317,6 @@ button:focus-visible {
   font-size: 0.9rem;
 }
 
-/* Submission steps — this genuinely is a sequence */
 .step-list {
   list-style: none;
   padding: 0;
@@ -414,7 +403,7 @@ button:focus-visible {
   margin: 0 auto 1.75rem;
 }
 
-.cta-band .btn { background: var(--plum-deep); color: var(--cream); }
+.cta-band .btn { background: var(--plum-deep); color: var(--ink-indigo-deep); }
 .cta-band .btn:hover { background: var(--crimson-hover); }
 
 footer {
@@ -473,37 +462,13 @@ footer {
 }
 
 @media (max-width: 640px) {
-  .site-nav { flex-direction: column; align-items: center; gap: 0.9rem; }
-  .nav-brand img { width: 205px; }
+  .site-nav { flex-direction: column; align-items: flex-start; gap: 0.75rem; }
   .site-nav.on-light { align-items: center; text-align: center; }
-}
 
-
-/* Brand asset pack integration */
-.nav-mark {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.7rem;
-  font-family: var(--font-body);
-  font-weight: 700;
-  font-size: 1.15rem;
-  text-decoration: none;
-  color: inherit;
-}
-.nav-mark img {
-  width: 34px;
-  height: 34px;
-  object-fit: contain;
-}
-.nav-brand {
-  display: inline-flex;
-  align-items: center;
-  text-decoration: none;
-}
-.nav-brand img {
-  width: clamp(150px, 18vw, 220px);
-  height: auto;
-}
-.hero-stamp {
-  width: 96px;
+  /* Keep the Red Stain Press logo lockup horizontal on small screens. */
+  .nav-mark {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    white-space: nowrap;
+  }
 }
