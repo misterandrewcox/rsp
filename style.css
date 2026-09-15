@@ -145,7 +145,7 @@ img, svg { max-width: 100%; display: block; }
 .hero-stamp {
   position: relative;
   z-index: 1;
-  width: clamp(132px, 13vw, 168px);
+  width: clamp(156px, 15vw, 196px);
   height: auto;
   margin: 0 auto 1.75rem;
 }
@@ -186,7 +186,7 @@ img, svg { max-width: 100%; display: block; }
 .hero p.lede {
   font-size: 1.15rem;
   color: rgba(249, 246, 240, 0.85);
-  max-width: 46ch;
+  max-width: 54ch;
   margin: 0 auto 2.5rem;
 }
 
