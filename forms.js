@@ -28,7 +28,7 @@ if(typeof document!=='undefined'){
     const note=form.querySelector('.form-note');
     const emailInput=form.querySelector('input[type="email"]');
     const defaultLabel=button.textContent;
-    form.addEventListener('input',()=>{if(button.dataset.sent){delete button.dataset.sent;button.disabled=false;button.textContent=defaultLabel;note.textContent='Just the good stuff. You can ask us to remove you at any time.';note.className='form-note';}});
+    form.addEventListener('input',()=>{if(button.dataset.sent){delete button.dataset.sent;button.disabled=false;button.textContent=defaultLabel;note.textContent='Title announcements and news. To leave the list, email hello@redstainpress.com.';note.className='form-note';}});
     form.addEventListener('submit',async event=>{
       event.preventDefault();
       if(button.disabled)return;
@@ -37,10 +37,10 @@ if(typeof document!=='undefined'){
       button.disabled=true;button.textContent='Sending…';note.textContent='Sending your signup request…';note.className='form-note';
       try{
         const result=await sendNewsletter(form.dataset.endpoint,emailInput.value);
-        if(result.confirmed){note.textContent='You’re on the list. Thank you for being here at the beginning.';note.classList.add('success');form.reset();}
-        else{note.textContent='Your signup request was sent. Registration isn’t confirmed on this page; email hello@redstainpress.com if you need help.';note.classList.add('request-sent');}
-        button.dataset.sent='true';button.textContent='Request sent';
-      }catch{note.textContent='We couldn’t send your request. Please try again, or email hello@redstainpress.com.';note.classList.add('error');button.disabled=false;button.textContent=defaultLabel;}
+        if(result.confirmed){note.textContent='You’re on the list. We’ll be in touch with launch news.';note.classList.add('success');form.reset();}
+        else{note.textContent='Your signup request has been sent. We can’t confirm registration here. Need help? Email hello@redstainpress.com.';note.classList.add('request-sent');}
+        button.dataset.sent='true';button.textContent=result.confirmed?'Signed up':'Request sent';
+      }catch{note.textContent='We couldn’t send your signup request. Please try again or email hello@redstainpress.com.';note.classList.add('error');button.disabled=false;button.textContent=defaultLabel;}
     });
   });
   document.querySelectorAll('[data-submission]').forEach(form=>{
@@ -52,10 +52,10 @@ if(typeof document!=='undefined'){
       if(button.disabled||!form.reportValidity())return;
       const link=form.querySelector('input[name="link"]');
       try{if(!['https:','http:'].includes(new URL(link.value).protocol))throw new Error();}
-      catch{link.setCustomValidity('Please use an https:// or http:// link.');link.reportValidity();return;}
-      button.disabled=true;button.textContent='Sending…';note.textContent='Sending your work…';note.className='form-note';
-      try{await sendSubmission(form.action,new FormData(form));note.textContent='Thank you—your submission has been received. We’ll be in touch if it feels right for our list.';note.classList.add('success');form.reset();}
-      catch{note.textContent='We couldn’t send your work. Your entries are still here. Please try again or email submissions@redstainpress.com.';note.classList.add('error');}
+      catch{link.setCustomValidity('Enter a full link beginning with https:// or http://.');link.reportValidity();return;}
+      button.disabled=true;button.textContent='Sending…';note.textContent='Sending your submission…';note.className='form-note';
+      try{await sendSubmission(form.action,new FormData(form));note.textContent='Thank you. Your submission has been received. We’ll be in touch if it feels right for our list.';note.classList.add('success');form.reset();}
+      catch{note.textContent='We couldn’t send your submission. Your entries are still here. Please try again or email submissions@redstainpress.com.';note.classList.add('error');}
       finally{button.disabled=false;button.textContent=defaultLabel;}
     });
     form.querySelector('input[name="link"]').addEventListener('input',event=>event.target.setCustomValidity(''));

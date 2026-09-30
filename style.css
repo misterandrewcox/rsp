@@ -29,3 +29,19 @@
 .brand-mark-on-dark{background:transparent;padding:0}
 @media(max-width:600px){.brand{font-size:22px;gap:12px}.brand img{width:74px}.brand-press{font-size:.9em}.header-inner{gap:18px}}
 @media(max-width:360px){.brand{font-size:20px;gap:10px}.brand img{width:62px}.menu-toggle{gap:8px;padding:8px 10px}}
+
+/* Copy refresh: clear positioning and founder statement. */
+.genre-band{display:block;font-size:clamp(1.1rem,2vw,1.6rem);line-height:1.4}
+.genre-band p{margin:0;max-width:100%}
+.pullquote h2{font-size:clamp(2.5rem,4.5vw,4.3rem);line-height:1.2;font-weight:500;letter-spacing:-.04em}
+.pullquote h2 em{background:transparent;padding:0}
+.founder-story{background:#eeece7}
+.founder-story .founder-byline{font-size:1rem;color:var(--ink);font-weight:600;line-height:1.5}
+.founder-byline span{font-size:.85rem;font-weight:400;color:var(--muted)}
+.expertise .expertise-signoff{font-size:1rem}
+.expertise h2 em{overflow-wrap:normal}
+.partner-opportunities .process-grid article{display:flex;flex-direction:column;align-items:flex-start}
+.partner-opportunities .process-grid h3{margin-top:0}
+.partner-opportunities .process-grid p{flex:1}
+.audience-grid article:last-child h3{font-size:clamp(2.1rem,3.1vw,2.8rem)}
+@media(max-width:600px){.genre-band{padding:21px 6vw;font-size:1.12rem}.pullquote h2{font-size:2.4rem}.expertise h2{font-size:clamp(2.05rem,8.8vw,2.65rem)}.founder-story .section-label{align-items:flex-start;gap:20px}.founder-story .founder-byline{margin:0;text-align:right}.partner-opportunities .process-grid p{margin-bottom:20px}}

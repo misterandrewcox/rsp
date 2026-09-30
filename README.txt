@@ -37,3 +37,14 @@ PROPER-CASING UPDATE
 Logo lettering uses Red Stain with capital R and S.
 Press uses 90% of the name size, sharing its font weight and color.
 CSS and script URLs include content versions to refresh cached resources.
+
+COPY REFRESH - September 30, 2026
+Public positioning: gay-owned independent publisher devoted to boys' love.
+Our story includes Andrew Cox's approved founder message, then business experience.
+Homepage founder banner remains unnamed. Biography uses global markets.
+Experience metric corrected to 9+ years; no editorial experience or team is claimed.
+Partners: rights and licensing, publishing/commercial relationships, and investment.
+Genre strip is one statement without category-link styling.
+Reader copy has a playful voice; instructions and form states stay clear.
+Submission response remains selective; no reply or feedback deadline is promised.
+Form services and destinations remain the same. No live test forms were sent.
