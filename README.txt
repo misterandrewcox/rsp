@@ -48,3 +48,10 @@ Genre strip is one statement without category-link styling.
 Reader copy has a playful voice; instructions and form states stay clear.
 Submission response remains selective; no reply or feedback deadline is promised.
 Form services and destinations remain the same. No live test forms were sent.
+
+STATEMENT AND COMPANY VOICE REFINEMENT
+The statement brush scales from 180px on mobile to 300px on desktop.
+Founder heading uses the full Red Stain Press name.
+The experience section uses financial modeling and concise company-focused wording.
+General site copy speaks about Red Stain; the personal founder note retains first person.
+Selective submission-contact expectations and form services are retained.

@@ -45,3 +45,7 @@
 .partner-opportunities .process-grid p{flex:1}
 .audience-grid article:last-child h3{font-size:clamp(2.1rem,3.1vw,2.8rem)}
 @media(max-width:600px){.genre-band{padding:21px 6vw;font-size:1.12rem}.pullquote h2{font-size:2.4rem}.expertise h2{font-size:clamp(2.05rem,8.8vw,2.65rem)}.founder-story .section-label{align-items:flex-start;gap:20px}.founder-story .founder-byline{margin:0;text-align:right}.partner-opportunities .process-grid p{margin-bottom:20px}}
+
+/* Statement mark scale and company-focused copy refinements. */
+.pullquote>img{width:clamp(180px,24vw,300px);height:auto;margin:0 auto 36px}
+@media(max-width:600px){.pullquote>img{margin-bottom:28px}.founder-story .section-label{flex-wrap:wrap}.founder-story .section-label>.eyebrow{max-width:160px}}
