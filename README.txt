@@ -1,20 +1,34 @@
-RED STAIN PRESS — WEB / SOCIAL ASSET PACK
+RED STAIN PRESS — WEBSITE
 
-Brand colors
-Stain Red: #9B0000
-Ink:       #121212
-Paper:     #F6F1E8
+Static website for redstainpress.com. Keep CNAME for the custom domain.
 
-Files
-- red-stain-press-logo-*.png: transparent full logo
-- red-stain-press-mark-*.png: transparent brush mark only
-- *.webp: lighter web versions
-- social-avatar-*: square profile images
-- icon-*: favicon / app-icon sizes
-- *.svg: scalable containers using the same artwork
+Pages
+index.html — Publishing focus and launch signup
+about.html — Publisher story and founder experience
+creators.html — Creator guidance and integrated submission form
+partners.html — Partnership and investor contact
+submissions.html — Compatibility redirect to the creator submission form
 
-Recommended use
-- Website header: logo-1600.webp or logo-1200px.png
-- Footer / publisher mark: mark-512px.png
-- Instagram / TikTok / Bluesky avatar: social-avatar-paper-1024.png
-- Dark/red profile option: social-avatar-red-1024.png
+Selected identity
+Horizontal brush in #9B0000. Primary mark: assets/brand-horizontal.svg.
+Small mark: assets/brand-horizontal-small.svg. Icon: assets/brand-favicon.svg.
+RED STAIN and Press use Red Hat Display weight 700.
+Press uses 80% of the name size, with matching weight and color.
+Secondary gold #F0D28D is used for selected text on dark backgrounds.
+Brush and red text accents are transparent in dark sections.
+Earlier logo assets remain in assets for reference.
+
+Forms
+Newsletter: existing Google Apps Script / Google Sheets endpoint.
+Creator submissions: existing Formspree endpoint xrpgnokp.
+Creator email: submissions@redstainpress.com.
+No live test submissions were sent during redesign validation.
+Verify real delivery to the Sheet and intended submission inbox after launch.
+
+Editing
+Shared styling: style.css. Navigation and publishing-interest tabs: script.js.
+Form handling: forms.js. Fonts load from Google Fonts with Arial fallback.
+Hero artwork: assets/manhwa-hero-v2.webp.
+Signup texture: assets/red-gold-marble-banner.webp.
+The hero and texture are concept artwork generated for this website.
+Shopify integration remains a future phase.

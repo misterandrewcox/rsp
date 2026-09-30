@@ -1,112 +1,14 @@
-// Red Stain Press — lightweight, dependency-free form handling.
-// Newsletter signups post to Google Apps Script / Google Sheets.
-// The submissions form continues to post to Formspree.
-
-document.addEventListener('DOMContentLoaded', function () {
-  var signupForm = document.getElementById('signup-form');
-
-  if (signupForm) {
-    var note = document.getElementById('form-note');
-    var emailInput = document.getElementById('email');
-    var signupBtn = signupForm.querySelector('button[type="submit"]');
-    var endpoint = signupForm.getAttribute('data-endpoint');
-    var defaultNote = note.textContent;
-    var defaultBtnText = signupBtn.textContent;
-
-    signupForm.addEventListener('submit', function (e) {
-      e.preventDefault();
-
-      note.classList.remove('success', 'error');
-
-      if (!emailInput.checkValidity()) {
-        note.textContent = 'Please enter a valid email address.';
-        note.classList.add('error');
-        emailInput.focus();
-        return;
-      }
-
-      var email = emailInput.value.trim();
-      signupBtn.disabled = true;
-      signupBtn.textContent = 'Joining…';
-      note.textContent = 'Adding you to the list…';
-
-      // Google Apps Script web apps do not expose a browser-readable CORS
-      // response by default. A no-cors text/plain POST reliably reaches the
-      // script while keeping the signup experience on this page.
-      fetch(endpoint, {
-        method: 'POST',
-        mode: 'no-cors',
-        keepalive: true,
-        headers: {
-          'Content-Type': 'text/plain;charset=utf-8'
-        },
-        body: JSON.stringify({
-          email: email,
-          source: 'Website — homepage'
-        })
-      })
-        .then(function () {
-          note.textContent = "You're on the list — thank you!";
-          note.classList.add('success');
-          signupForm.reset();
-        })
-        .catch(function () {
-          note.textContent = 'Something went wrong. Please try again.';
-          note.classList.add('error');
-        })
-        .finally(function () {
-          signupBtn.disabled = false;
-          signupBtn.textContent = defaultBtnText;
-
-          setTimeout(function () {
-            note.textContent = defaultNote;
-            note.classList.remove('success', 'error');
-          }, 6000);
-        });
-    });
-  }
-
-  var submissionForm = document.getElementById('submission-form');
-  if (submissionForm) {
-    var subNote = document.getElementById('submission-note');
-    var submitBtn = submissionForm.querySelector('button[type="submit"]');
-    var defaultBtnText = submitBtn.textContent;
-
-    submissionForm.addEventListener('submit', function (e) {
-      e.preventDefault();
-
-      subNote.classList.remove('success', 'error');
-      subNote.textContent = '';
-      submitBtn.disabled = true;
-      submitBtn.textContent = 'Sending…';
-
-      fetch(submissionForm.action, {
-        method: 'POST',
-        body: new FormData(submissionForm),
-        headers: { Accept: 'application/json' }
-      })
-        .then(function (response) {
-          if (response.ok) {
-            subNote.textContent = "Thank you — your submission has been sent. We'll be in touch if it's a fit.";
-            subNote.classList.add('success');
-            submissionForm.reset();
-          } else {
-            return response.json().then(function (data) {
-              var message = (data && data.errors && data.errors.length)
-                ? data.errors.map(function (err) { return err.message; }).join(', ')
-                : 'Something went wrong sending your submission.';
-              throw new Error(message);
-            });
-          }
-        })
-        .catch(function () {
-          subNote.textContent = 'Something went wrong sending your submission — please try again, or email us directly at submissions@redstainpress.com.';
-          subNote.classList.add('error');
-        })
-        .finally(function () {
-          submitBtn.disabled = false;
-          submitBtn.textContent = defaultBtnText;
-        });
-    });
-  }
-});
+const menuButton=document.querySelector('.menu-toggle');
+const navigation=document.querySelector('#primary-nav');
+function closeMenu(){navigation.classList.remove('is-open');menuButton.setAttribute('aria-expanded','false');}
+menuButton.addEventListener('click',()=>{const open=menuButton.getAttribute('aria-expanded')!=='true';menuButton.setAttribute('aria-expanded',String(open));navigation.classList.toggle('is-open',open);});
+document.addEventListener('keydown',event=>{if(event.key==='Escape'&&menuButton.getAttribute('aria-expanded')==='true'){closeMenu();menuButton.focus();}});
+navigation.querySelectorAll('a').forEach(link=>link.addEventListener('click',closeMenu));
+const tropes={
+everyday:{number:'1',label:'Slice of life · Office romance',title:'Ordinary days.<br>Extraordinary feelings.',copy:'A glance across the office. A familiar face at the coffee shop. Childhood friends discovering that “just friends” has an expiration date.',note:'Slow burns, adult romances, and the little moments that change everything.'},
+fantasy:{number:'2',label:'Fantasy · Historical · Omegaverse',title:'Other worlds.<br>The same pull.',copy:'A love that crosses kingdoms. A bond that rewrites destiny. Characters finding each other in worlds with rules all their own.',note:'Immersive settings, high stakes, and romance at the heart of the story.'},
+complicated:{number:'3',label:'Drama · Found family · Adult romance',title:'Messy feelings.<br>Worth every page.',copy:'Bad timing. Complicated histories. People with a little more life behind them, figuring out what they want—and who they want it with.',note:'Emotional turns, older protagonists, and relationships with room to grow.'}
+};
+const tabs=[...document.querySelectorAll('[data-trope]')];
+function chooseTrope(tab){const item=tropes[tab.dataset.trope];tabs.forEach(t=>{t.setAttribute('aria-selected',String(t===tab));t.tabIndex=t===tab?0:-1;});document.querySelector('#trope-panel').setAttribute('aria-labelledby',tab.id);document.querySelector('.trope-number').textContent=item.number;document.querySelector('#trope-label').textContent=item.label;document.querySelector('#trope-title').innerHTML=item.title;document.querySelector('#trope-copy').textContent=item.copy;document.querySelector('#trope-note').textContent=item.note;}
+tabs.forEach((tab,index)=>{tab.addEventListener('click',()=>chooseTrope(tab));tab.addEventListener('keydown',event=>{let next=index;if(event.key==='ArrowRight')next=(index+1)%tabs.length;else if(event.key==='ArrowLeft')next=(index+tabs.length-1)%tabs.length;else if(event.key==='Home')next=0;else if(event.key==='End')next=tabs.length-1;else return;event.preventDefault();chooseTrope(tabs[next]);tabs[next].focus();});});
