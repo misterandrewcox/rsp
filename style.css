@@ -49,3 +49,6 @@
 /* Statement mark scale and company-focused copy refinements. */
 .pullquote>img{width:clamp(180px,24vw,300px);height:auto;margin:0 auto 36px}
 @media(max-width:600px){.pullquote>img{margin-bottom:28px}.founder-story .section-label{flex-wrap:wrap}.founder-story .section-label>.eyebrow{max-width:160px}}
+
+/* Optical spacing between italic and sans-serif text in the statement. */
+.pullquote h2 em{margin-inline-end:.16em}
