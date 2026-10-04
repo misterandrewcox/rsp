@@ -37,7 +37,7 @@ if(typeof document!=='undefined'){
       button.disabled=true;button.textContent='Sending…';note.textContent='Sending your signup request…';note.className='form-note';
       try{
         const result=await sendNewsletter(form.dataset.endpoint,emailInput.value);
-        if(result.confirmed){note.textContent='You’re on the list. Look out for launch news from Red Stain.';note.classList.add('success');form.reset();}
+        if(result.confirmed){note.textContent='You’re on the list. Look out for launch news from Red Stain Press.';note.classList.add('success');form.reset();}
         else{note.textContent='Your signup request has been sent. Registration can’t be confirmed here. Need help? Email hello@redstainpress.com.';note.classList.add('request-sent');}
         button.dataset.sent='true';button.textContent=result.confirmed?'Signed up':'Request sent';
       }catch{note.textContent='Your signup request couldn’t be sent. Please try again or email hello@redstainpress.com.';note.classList.add('error');button.disabled=false;button.textContent=defaultLabel;}
@@ -54,7 +54,7 @@ if(typeof document!=='undefined'){
       try{if(!['https:','http:'].includes(new URL(link.value).protocol))throw new Error();}
       catch{link.setCustomValidity('Enter a full link beginning with https:// or http://.');link.reportValidity();return;}
       button.disabled=true;button.textContent='Sending…';note.textContent='Sending your submission…';note.className='form-note';
-      try{await sendSubmission(form.action,new FormData(form));note.textContent='Thank you. Your submission has been received. Red Stain will be in touch if it feels right for the list.';note.classList.add('success');form.reset();}
+      try{await sendSubmission(form.action,new FormData(form));note.textContent='Thank you. Your submission has been received. Red Stain Press will be in touch if it feels right for the list.';note.classList.add('success');form.reset();}
       catch{note.textContent='Your submission couldn’t be sent. Your entries are still here. Please try again or email submissions@redstainpress.com.';note.classList.add('error');}
       finally{button.disabled=false;button.textContent=defaultLabel;}
     });

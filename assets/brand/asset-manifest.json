@@ -1,0 +1,356 @@
+{
+  "brand_status": "Approved initial masters, effective 2026-10-04",
+  "guideline_url": "https://redstainpress.sharepoint.com/Shared%20Documents/Publishing%20Operations/12%20Brand%20Website%20and%20Platform%20Operations/Branding/Initial%20Masters/RSP-Brand-Guidelines-v0.2.pdf",
+  "created_at": "2026-10-04T19:44:05.917300+00:00",
+  "files": [
+    {
+      "path": "assets/brand/rsp-logo-horizontal.svg",
+      "bytes": 8935,
+      "sha256": "4daf22005d812929dbbe9529bb3841a7d5fa78136677a874ffdbfeeafd45fa0f",
+      "source_file": "/workspace/scratch/538042dc4e51/outputs/RSP-Brand-Kit-v0.2/assets/svg/RSP-Logo-Horizontal-Primary.svg",
+      "source_sha256": "4daf22005d812929dbbe9529bb3841a7d5fa78136677a874ffdbfeeafd45fa0f",
+      "transformation": "unchanged byte copy"
+    },
+    {
+      "path": "assets/brand/rsp-symbol.svg",
+      "bytes": 3199,
+      "sha256": "d09d966690cead80faa69309b4064568fa8de71a0d608a56956c708900e370f3",
+      "source_file": "/workspace/scratch/538042dc4e51/outputs/RSP-Brand-Kit-v0.2/assets/svg/RSP-Logo-Symbol-Red.svg",
+      "source_sha256": "d09d966690cead80faa69309b4064568fa8de71a0d608a56956c708900e370f3",
+      "transformation": "unchanged byte copy"
+    },
+    {
+      "path": "assets/brand/favicon.svg",
+      "bytes": 3185,
+      "sha256": "0c69fa39ff89825331b51cc06597ae2b1bdd2c0f8de3866908f05679433c852b",
+      "source_file": "/workspace/scratch/538042dc4e51/outputs/RSP-Brand-Kit-v0.2/assets/web-icons/favicon.svg",
+      "source_sha256": "0c69fa39ff89825331b51cc06597ae2b1bdd2c0f8de3866908f05679433c852b",
+      "transformation": "unchanged byte copy"
+    },
+    {
+      "path": "assets/brand/favicon.ico",
+      "bytes": 2524,
+      "sha256": "b16613e8c7d9fe887d37a0a610ff3d1717909bde32551507f9887713cf37801a",
+      "source_file": "/workspace/scratch/538042dc4e51/outputs/RSP-Brand-Kit-v0.2/assets/web-icons/favicon.ico",
+      "source_sha256": "b16613e8c7d9fe887d37a0a610ff3d1717909bde32551507f9887713cf37801a",
+      "transformation": "unchanged byte copy"
+    },
+    {
+      "path": "assets/brand/favicon-16.png",
+      "bytes": 442,
+      "sha256": "0517f2e9490eb47ffb3cb42bf6887a9acc487dd2e338297d966a6a8c20af505e",
+      "source_file": "/workspace/scratch/538042dc4e51/outputs/RSP-Brand-Kit-v0.2/assets/web-icons/favicon-16.png",
+      "source_sha256": "0517f2e9490eb47ffb3cb42bf6887a9acc487dd2e338297d966a6a8c20af505e",
+      "transformation": "unchanged byte copy"
+    },
+    {
+      "path": "assets/brand/favicon-32.png",
+      "bytes": 817,
+      "sha256": "1b50aebc733b21fe129cf02e6dc760a65d64d2b92d1194a7af13c1e7b76ee662",
+      "source_file": "/workspace/scratch/538042dc4e51/outputs/RSP-Brand-Kit-v0.2/assets/web-icons/favicon-32.png",
+      "source_sha256": "1b50aebc733b21fe129cf02e6dc760a65d64d2b92d1194a7af13c1e7b76ee662",
+      "transformation": "unchanged byte copy"
+    },
+    {
+      "path": "assets/brand/favicon-48.png",
+      "bytes": 1211,
+      "sha256": "1fe4c9e5b4ff1e2309fdd7abbc3d3d8c081a6d38e9e93075c616fbd839746501",
+      "source_file": "/workspace/scratch/538042dc4e51/outputs/RSP-Brand-Kit-v0.2/assets/web-icons/favicon-48.png",
+      "source_sha256": "1fe4c9e5b4ff1e2309fdd7abbc3d3d8c081a6d38e9e93075c616fbd839746501",
+      "transformation": "unchanged byte copy"
+    },
+    {
+      "path": "assets/brand/apple-touch-icon-180.png",
+      "bytes": 4149,
+      "sha256": "b5378f556790417ef64d0f20fbcd8b6d010f5d37aec1151e9d5dccea015e7fcf",
+      "source_file": "/workspace/scratch/538042dc4e51/outputs/RSP-Brand-Kit-v0.2/assets/web-icons/apple-touch-icon-180.png",
+      "source_sha256": "b5378f556790417ef64d0f20fbcd8b6d010f5d37aec1151e9d5dccea015e7fcf",
+      "transformation": "unchanged byte copy"
+    },
+    {
+      "path": "assets/smudge/Smudge-Newsletter-w256.png",
+      "bytes": 61661,
+      "sha256": "26b603d44c5ab220d3bb95c3e1e2c2333f222dd2c7d909f98ac89cbb9975de2e",
+      "source_file": "/workspace/scratch/538042dc4e51/outputs/RSP-Brand-Kit-v0.2/smudge/assets/exports/Smudge-Newsletter-w256.png",
+      "source_sha256": "26b603d44c5ab220d3bb95c3e1e2c2333f222dd2c7d909f98ac89cbb9975de2e",
+      "transformation": "unchanged byte copy"
+    },
+    {
+      "path": "assets/smudge/Smudge-Newsletter-w512.png",
+      "bytes": 205974,
+      "sha256": "1da23b64184d79ebfb0dcfa25e3e70b57a650f19d316d7fab0173b4348a163af",
+      "source_file": "/workspace/scratch/538042dc4e51/outputs/RSP-Brand-Kit-v0.2/smudge/assets/exports/Smudge-Newsletter-w512.png",
+      "source_sha256": "1da23b64184d79ebfb0dcfa25e3e70b57a650f19d316d7fab0173b4348a163af",
+      "transformation": "unchanged byte copy"
+    },
+    {
+      "path": "assets/smudge/Smudge-Newsletter-w1024.png",
+      "bytes": 739805,
+      "sha256": "865e43cfb68b158b7c1841a54555dd0c5f477cb62bbc77cce34351468d8fbc60",
+      "source_file": "/workspace/scratch/538042dc4e51/outputs/RSP-Brand-Kit-v0.2/smudge/assets/exports/Smudge-Newsletter-w1024.png",
+      "source_sha256": "865e43cfb68b158b7c1841a54555dd0c5f477cb62bbc77cce34351468d8fbc60",
+      "transformation": "unchanged byte copy"
+    },
+    {
+      "path": "assets/fonts/OFL.txt",
+      "bytes": 4394,
+      "sha256": "435fbfb7e66988b2a06686a4cb966faec733f35d8fe100a1601573c27f3e0bb8",
+      "source_file": "/workspace/scratch/538042dc4e51/outputs/RSP-Brand-Kit-v0.2/assets/fonts/OFL.txt",
+      "source_sha256": "435fbfb7e66988b2a06686a4cb966faec733f35d8fe100a1601573c27f3e0bb8",
+      "transformation": "unchanged byte copy"
+    },
+    {
+      "path": "assets/fonts/OFL-RedHatOfficial.txt",
+      "bytes": 4364,
+      "sha256": "67414d7bd2dee0381d21f9dea43c2653972967a64402e7579f9a0f6c3a47c938",
+      "source_file": "/workspace/scratch/538042dc4e51/tmp/rsp-font-source/RedHatOfficial-LICENSE.txt",
+      "source_sha256": "67414d7bd2dee0381d21f9dea43c2653972967a64402e7579f9a0f6c3a47c938",
+      "transformation": "unchanged byte copy"
+    },
+    {
+      "path": "assets/fonts/RedHatDisplay-Variable.woff2",
+      "bytes": 40936,
+      "sha256": "c8f016025e9111590e28a31fc74b5f2cf2ea134ccffde4df4598cb70f03b1ba7",
+      "source_file": "/workspace/scratch/538042dc4e51/outputs/RSP-Brand-Kit-v0.2/assets/fonts/RedHatDisplay-Variable.ttf",
+      "source_sha256": "46c9d4c4a2415e7e72020b318f5cda2bcbc9018d78b1a67e480a76d8d6e4b379",
+      "transformation": "Lossless WOFF2 packaging; all glyphs, character mappings, font names, weight axis and licensing retained"
+    },
+    {
+      "path": "assets/fonts/RedHatDisplay-Italic-Variable.woff2",
+      "bytes": 42424,
+      "sha256": "ad58f7fcae1bb271807d629e3d7bf370be17b13436c1753720db1f389d8cc114",
+      "source_file": "/workspace/scratch/538042dc4e51/tmp/rsp-font-source/RedHatDisplay-Italic-Variable.ttf",
+      "source_sha256": "9e38e51676098aa9365d8be4ef5f6738ddd2326eb9844e7f85192a5afdab941a",
+      "transformation": "Lossless WOFF2 packaging; all glyphs, character mappings, font names, weight axis and licensing retained",
+      "source_url": "https://raw.githubusercontent.com/RedHatOfficial/RedHatFont/master/fonts/Proportional/RedHatDisplay/variable/RedHatDisplay-Italic-VF.ttf"
+    },
+    {
+      "path": "assets/fonts/FONT-SOURCE.txt",
+      "bytes": 1083,
+      "sha256": "d9cba46bbb733af5142d30ad49fff82aad280b90ac21ba8b6b2efafe076b5c5e",
+      "source_file": "/workspace/scratch/538042dc4e51/outputs/RSP-Brand-Kit-v0.2/assets/fonts/FONT-SOURCE.txt",
+      "source_sha256": "d346cc18690f9e6e3af06e9306ac6c363a5ca8bc9262ae69f498ec12ba78c19d",
+      "transformation": "Original font provenance retained; website packaging and authentic italic provenance appended"
+    },
+    {
+      "path": "assets/brand/rsp-social-preview.svg",
+      "bytes": 9152,
+      "sha256": "a5dd05709e9229910319886c9f62fc03861ce22ac1e6fde709db882c48f135f2",
+      "source_file": "assets/brand/rsp-logo-horizontal.svg",
+      "source_sha256": "4daf22005d812929dbbe9529bb3841a7d5fa78136677a874ffdbfeeafd45fa0f",
+      "transformation": "Centered approved lockup, scaled evenly on brand paper #F8F7F3 for 1200x630 social link preview; PNG exported from SVG."
+    },
+    {
+      "path": "assets/brand/rsp-social-preview.png",
+      "bytes": 25407,
+      "sha256": "d74c252711bf740deeabe4fc0d5301c51bb89fdbead84e3d2629cd5be81a544d",
+      "source_file": "assets/brand/rsp-logo-horizontal.svg",
+      "source_sha256": "4daf22005d812929dbbe9529bb3841a7d5fa78136677a874ffdbfeeafd45fa0f",
+      "transformation": "Centered approved lockup, scaled evenly on brand paper #F8F7F3 for 1200x630 social link preview; PNG exported from SVG."
+    }
+  ],
+  "verification": {
+    "logos": {
+      "rsp-logo-horizontal.svg": {
+        "viewBox": "0 0 341.888000 90.058252",
+        "fill_colors": [
+          "#121212",
+          "#9B0000"
+        ]
+      },
+      "rsp-symbol.svg": {
+        "viewBox": "0 0 1035.158000 1036.163000",
+        "fill_colors": [
+          "#9B0000"
+        ]
+      },
+      "favicon.svg": {
+        "viewBox": "0 0 1000.000000 1000.000000",
+        "fill_colors": [
+          "#9B0000"
+        ]
+      }
+    },
+    "icons": [
+      {
+        "file": "favicon-16.png",
+        "dimensions": [
+          16,
+          16
+        ],
+        "alpha_bounds": [
+          1,
+          1,
+          15,
+          15
+        ],
+        "max_mark_radius_relative_to_circle": 0.8883,
+        "fits_circular_crop": true,
+        "observed_raster_color_count": 3,
+        "source_vector_mark_fill": "#9B0000",
+        "raster_edge_note": "Approved master raster preserved unchanged; edge colors reflect antialiasing and, for the touch icon, blending against brand paper."
+      },
+      {
+        "file": "favicon-32.png",
+        "dimensions": [
+          32,
+          32
+        ],
+        "alpha_bounds": [
+          2,
+          2,
+          30,
+          30
+        ],
+        "max_mark_radius_relative_to_circle": 0.9813,
+        "fits_circular_crop": true,
+        "observed_raster_color_count": 3,
+        "source_vector_mark_fill": "#9B0000",
+        "raster_edge_note": "Approved master raster preserved unchanged; edge colors reflect antialiasing and, for the touch icon, blending against brand paper."
+      },
+      {
+        "file": "favicon-48.png",
+        "dimensions": [
+          48,
+          48
+        ],
+        "alpha_bounds": [
+          4,
+          4,
+          44,
+          44
+        ],
+        "max_mark_radius_relative_to_circle": 0.9794,
+        "fits_circular_crop": true,
+        "observed_raster_color_count": 3,
+        "source_vector_mark_fill": "#9B0000",
+        "raster_edge_note": "Approved master raster preserved unchanged; edge colors reflect antialiasing and, for the touch icon, blending against brand paper."
+      },
+      {
+        "file": "apple-touch-icon-180.png",
+        "dimensions": [
+          180,
+          180
+        ],
+        "alpha_bounds": [
+          0,
+          0,
+          180,
+          180
+        ],
+        "max_mark_radius_relative_to_circle": 0.7144,
+        "fits_circular_crop": true,
+        "observed_raster_color_count": 224,
+        "source_vector_mark_fill": "#9B0000",
+        "raster_edge_note": "Approved master raster preserved unchanged; edge colors reflect antialiasing and, for the touch icon, blending against brand paper."
+      },
+      {
+        "file": "favicon.ico",
+        "embedded_sizes": [
+          [
+            16,
+            16
+          ],
+          [
+            32,
+            32
+          ],
+          [
+            48,
+            48
+          ]
+        ]
+      }
+    ],
+    "mascot": [
+      {
+        "file": "Smudge-Newsletter-w256.png",
+        "dimensions": [
+          256,
+          213
+        ],
+        "mode": "RGBA",
+        "alpha_range": [
+          0,
+          255
+        ],
+        "alpha_bounds": [
+          9,
+          6,
+          246,
+          206
+        ]
+      },
+      {
+        "file": "Smudge-Newsletter-w512.png",
+        "dimensions": [
+          512,
+          427
+        ],
+        "mode": "RGBA",
+        "alpha_range": [
+          0,
+          255
+        ],
+        "alpha_bounds": [
+          21,
+          15,
+          490,
+          410
+        ]
+      },
+      {
+        "file": "Smudge-Newsletter-w1024.png",
+        "dimensions": [
+          1024,
+          853
+        ],
+        "mode": "RGBA",
+        "alpha_range": [
+          0,
+          255
+        ],
+        "alpha_bounds": [
+          0,
+          33,
+          1020,
+          853
+        ]
+      }
+    ],
+    "fonts": [
+      {
+        "file": "RedHatDisplay-Variable.woff2",
+        "family": "Red Hat Display",
+        "subfamily": "Regular",
+        "italic_angle": 0.0,
+        "characters": 406,
+        "axes": [
+          {
+            "tag": "wght",
+            "min": 300.0,
+            "default": 400.0,
+            "max": 900.0
+          }
+        ],
+        "bytes": 40936
+      },
+      {
+        "file": "RedHatDisplay-Italic-Variable.woff2",
+        "family": "Red Hat Display",
+        "subfamily": "Italic",
+        "italic_angle": -12.0,
+        "characters": 405,
+        "axes": [
+          {
+            "tag": "wght",
+            "min": 300.0,
+            "default": 400.0,
+            "max": 900.0
+          }
+        ],
+        "bytes": 42424
+      }
+    ]
+  }
+}

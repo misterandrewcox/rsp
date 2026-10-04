@@ -1,0 +1,16 @@
+Red Hat Display variable font
+Copyright 2024 The Red Hat Project Authors
+SIL Open Font License 1.1
+
+Official project: https://github.com/RedHatOfficial/RedHatFont
+License source retrieved 2026-10-04:
+https://raw.githubusercontent.com/google/fonts/main/ofl/redhatdisplay/OFL.txt
+
+The supplied variable font is unchanged. Logo wordmarks are outlined, so they do not depend on font installation.
+
+Website webfont packaging — 2026-10-04
+The upright font is packaged losslessly as RedHatDisplay-Variable.woff2 from the approved kit TTF, with its full 300–900 weight range and all 406 mapped characters retained.
+The authentic italic variable font is from the official Red Hat font project:
+https://raw.githubusercontent.com/RedHatOfficial/RedHatFont/master/fonts/Proportional/RedHatDisplay/variable/RedHatDisplay-Italic-VF.ttf
+It is packaged losslessly as RedHatDisplay-Italic-Variable.woff2, with its full 300–900 weight range and all 405 mapped characters retained. No synthetic slant or font subsetting is used.
+The italic upstream license is provided in OFL-RedHatOfficial.txt.

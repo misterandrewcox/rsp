@@ -1,0 +1,77 @@
+RED STAIN PRESS — WEBSITE BRAND IMPLEMENTATION REVIEW
+Working draft v0.1 | October 4, 2026 | Not deployed
+
+Source baseline
+GitHub repository: https://github.com/misterandrewcox/rsp
+Base commit: 658a98c04b0b4e7122a0ba5a3298588f3633f221
+The remote main branch was read on October 4 and matched this commit.
+Implementation branch: brand-guidelines-2026-10-04
+The imported publishing files match this baseline after line-ending normalization.
+Older logo studies and builder scripts were not reapplied.
+
+Controlling brand sources
+RSP-Brand-Guidelines-v0.2.pdf, company kit v0.2, Smudge kit v0.1,
+and RSP_Brand_Initial_Master_Context_v1.0_2026-10-04.txt.
+These are the approved initial masters, effective October 4, 2026.
+Guidelines: https://redstainpress.sharepoint.com/Shared%20Documents/Publishing%20Operations/12%20Brand%20Website%20and%20Platform%20Operations/Branding/Initial%20Masters/RSP-Brand-Guidelines-v0.2.pdf
+The current Start Here index edition 1.3, route T18, was read before work.
+This implementation does not revise the approved brand masters or policy records.
+
+Implemented
+- All four full pages and the legacy submissions redirect use the new browser icons.
+- All eight header/footer identities use the supplied outlined horizontal SVG.
+  The full company name is one line, with every word at equal size and weight.
+- Standalone corporate marks use the exact supplied splash in solid #9B0000.
+  Red marks on dark sections have a calm paper surface to retain visibility.
+- Red Hat Display is hosted locally, with authentic upright and italic variable fonts.
+  Headings/labels/buttons use Bold; body copy uses Regular.
+- Paper remains #F8F7F3. Gold is #F0D28D. Ink is #121212.
+  Dark-section text accents use gold rather than low-contrast red text.
+- Shared horizontal gutters replace conflicting hero/header/section padding.
+  The hero's separate maximum-width cap is removed, including the wide-screen
+  alignment mismatch. Intentional section-label/body columns remain.
+- Header navigation collapses before the larger one-line lockup becomes cramped.
+  Company-name spans prevent static copy splitting the name over two lines.
+- Smudge supports the Home and Our Story newsletter areas, using the approved
+  transparent Newsletter pose on paper. The full silhouette is retained.
+- Social link previews use an evenly scaled approved lockup on brand paper.
+- Approved prose is retained apart from replacing short company references with
+  the full name. Founder/business experience, selective submission contact,
+  artwork, services, destinations, consent, and fields remain as approved.
+- CSS and changed form-script references have updated content cache versions.
+
+Verification completed
+All five HTML pages: local files and page fragments resolve; unique IDs, image
+alt attributes, external-link protection, full brand identities, canonical URLs,
+icons, required fields, consent, status announcements and honeypot pass checks.
+Approved logo/symbol/favicon SVGs are byte-identical to their supplied masters.
+Both WOFF2 files retain real Red Hat Display names and the 300–900 weight range.
+Nine mocked behavior checks pass: newsletter payload/consent, opaque-response
+truthfulness, explicit confirmation, required-field blocking, error retention and
+retry, submission URL correction, submission result handling, navigation closing,
+and keyboard operation of the publishing-interest tabs. No real forms were sent.
+Git whitespace checks pass. Font-metric and CSS checks support the one-line name
+at 320 px and the header widths checked at 320, 390, 1051, 1440 and 1920 px.
+The newsletter overlay's .72 minimum opacity yields at least 5.13:1 for gold text
+against the conservative white-underlying-art bound; paper text also passes.
+These are source/metric checks, not evidence of browser rendering.
+
+Outstanding release checks
+The cloud browser blocked local HTTP and shared-file preview access. A browser
+binary could not be downloaded, so actual browser screenshots and visual review
+are pending. Check every page at desktop and narrow widths, including the flagged
+third-section text alignment, logo edges, no-wrap text and the complete Smudge pose.
+Newsletter registration still needs a real Google Sheet write check. Creator
+submissions still need a real Formspree/inbox delivery check with an authorized
+recipient/test. An opaque response does not prove registration.
+No push, merge, Pages deployment, live social rollout, Shopify work or production
+form delivery is recorded complete by this draft. Review and deploy this branch
+separately, then verify the actual public pages and cached icons.
+
+Package use
+The ZIP contains the complete website tree and this review note; it excludes Git
+internals. Extract it, open index.html for a file preview, or serve the folder with
+python -m http.server 5173. The actual forms retain their production destinations.
+For publishing, review the branch diff against the source baseline; retain CNAME,
+production robots.txt and canonical URLs. Historical brush assets are preserved
+for traceability but no page or active stylesheet references them.
