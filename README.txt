@@ -41,6 +41,13 @@ dark paws, a full fluffy tail, and one iris/pupil per open eye.
 Illustrated shading is allowed; the mascot does not replace the corporate logo.
 Earlier brush/Press-size instructions and older study assets are superseded.
 
+Dark website surfaces — founder correction, October 4, 2026
+Large emphasized headline words and statement accents use brand red #9B0000.
+Unaccented headline text stays paper; small section labels/subheaders may use gold.
+Native transparent corporate marks and Smudge sit directly on quiet dark surfaces,
+without forced paper/white tiles. Preserve the artwork and its full silhouette.
+The company identity, palette and supplied masters otherwise remain unchanged.
+
 Forms
 Newsletter: existing Google Apps Script / Google Sheets endpoint.
 Creator submissions: existing Formspree endpoint xrpgnokp.
@@ -64,8 +71,8 @@ After publishing, check the actual public pages, icons, and form delivery.
 Approved copy retained
 Public positioning: gay-owned independent publisher devoted to boys' love.
 Our Story includes Andrew Cox's approved founder message, then business experience.
-The experience metric is 9+ years on the business side of publishing; no editorial
-experience or team is claimed. Biography covers global markets, financial
+The experience metric is 10 years in publishing, as corrected October 4, 2026.
+No editorial experience or team is claimed. Biography covers global markets, financial
 modeling, publishing strategy, analytics, and business development.
 General copy uses the company voice; the founder note retains first person.
 Partners: rights and licensing, publishing/commercial relationships, and investment.

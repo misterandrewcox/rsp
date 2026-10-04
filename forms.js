@@ -18,10 +18,16 @@ async function sendSubmission(endpoint,formData,request=fetch){
   const response=await requestForm(endpoint,{method:'POST',body:formData,headers:{Accept:'application/json'}},request);
   if(!response.ok)throw new Error('Submission was not accepted');
   const result=await response.json();
-  if(result.errors?.length)throw new Error('Submission was not accepted');
+  if(result.errors?.length||result.ok===false||result.success===false)throw new Error('Submission was not accepted');
   return {confirmed:true};
 }
 if(typeof module!=='undefined'&&module.exports)module.exports={sendNewsletter,sendSubmission};
+// Freeze the submitted values until the response settles; preserve disabled states.
+function lockFormFields(form){
+  const fields=[...form.querySelectorAll('input,select,textarea')].map(field=>({field,disabled:field.disabled}));
+  fields.forEach(({field})=>{field.disabled=true;});
+  return ()=>fields.forEach(({field,disabled})=>{field.disabled=disabled;});
+}
 if(typeof document!=='undefined'){
   document.querySelectorAll('[data-newsletter]').forEach(form=>{
     const button=form.querySelector('button[type="submit"]');
@@ -34,13 +40,16 @@ if(typeof document!=='undefined'){
       if(button.disabled)return;
       emailInput.value=emailInput.value.trim();
       if(!form.reportValidity())return;
+      const email=emailInput.value;
+      const unlockFields=lockFormFields(form);
       button.disabled=true;button.textContent='Sending…';note.textContent='Sending your signup request…';note.className='form-note';
       try{
-        const result=await sendNewsletter(form.dataset.endpoint,emailInput.value);
+        const result=await sendNewsletter(form.dataset.endpoint,email);
         if(result.confirmed){note.textContent='You’re on the list. Look out for launch news from Red Stain Press.';note.classList.add('success');form.reset();}
         else{note.textContent='Your signup request has been sent. Registration can’t be confirmed here. Need help? Email hello@redstainpress.com.';note.classList.add('request-sent');}
         button.dataset.sent='true';button.textContent=result.confirmed?'Signed up':'Request sent';
       }catch{note.textContent='Your signup request couldn’t be sent. Please try again or email hello@redstainpress.com.';note.classList.add('error');button.disabled=false;button.textContent=defaultLabel;}
+      finally{unlockFields();}
     });
   });
   document.querySelectorAll('[data-submission]').forEach(form=>{
@@ -53,10 +62,13 @@ if(typeof document!=='undefined'){
       const link=form.querySelector('input[name="link"]');
       try{if(!['https:','http:'].includes(new URL(link.value).protocol))throw new Error();}
       catch{link.setCustomValidity('Enter a full link beginning with https:// or http://.');link.reportValidity();return;}
+      // Capture FormData before disabling fields, so every submitted value is included.
+      const formData=new FormData(form);
+      const unlockFields=lockFormFields(form);
       button.disabled=true;button.textContent='Sending…';note.textContent='Sending your submission…';note.className='form-note';
-      try{await sendSubmission(form.action,new FormData(form));note.textContent='Thank you. Your submission has been received. Red Stain Press will be in touch if it feels right for the list.';note.classList.add('success');form.reset();}
+      try{await sendSubmission(form.action,formData);note.textContent='Thank you. Your submission has been received. Red Stain Press will be in touch if it feels right for the list.';note.classList.add('success');form.reset();}
       catch{note.textContent='Your submission couldn’t be sent. Your entries are still here. Please try again or email submissions@redstainpress.com.';note.classList.add('error');}
-      finally{button.disabled=false;button.textContent=defaultLabel;}
+      finally{unlockFields();button.disabled=false;button.textContent=defaultLabel;}
     });
     form.querySelector('input[name="link"]').addEventListener('input',event=>event.target.setCustomValidity(''));
   });

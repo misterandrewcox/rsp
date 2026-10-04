@@ -101,26 +101,45 @@ h1 em, h2 em, blockquote em {
   font-weight: inherit;
   letter-spacing: inherit;
 }
-.pullquote h2, .trope-number, .expertise-facts .fact {
+.pullquote h2, .trope-number, .expertise-facts .fact, .art-stamp, .step {
   font-weight: 700;
 }
 .hero-lede, .genre-band, .trope-note p {
   font-weight: 400;
 }
 .newsletter-form > label:first-child { font-weight: 700; }
-/* Gold is readable on ink; the red symbol keeps a quiet paper surface. */
-.expertise h2 em, .pullquote em, .partner-contact h2 em,
-.expertise .text-link:hover, .partner-contact .text-link:hover {
+/* Large statement accents use brand red; small dark-section labels may use gold. */
+.expertise h2 em, .pullquote h2 em, .partner-contact h2 em { color: var(--red); }
+
+.expertise .text-link:hover, .partner-contact .text-link:hover,
+.partner-contact .contact-email a:hover {
   color: var(--gold);
 }
 .brand-mark-on-dark {
-  background: var(--paper);
-  padding: 8px;
+  background: transparent;
+  padding: 0;
   width: 104px;
   height: auto;
   flex: none;
 }
-.expertise-facts .fact-last { gap: 28px; }
+/* Every fact description starts at the same column, including the native symbol row. */
+.expertise-facts {
+  --fact-column: 115px;
+  --fact-gap: 26px;
+  display: grid;
+  gap: 0;
+}
+.expertise-facts > div {
+  display: grid;
+  grid-template-columns: var(--fact-column) minmax(0, 1fr);
+  gap: var(--fact-gap);
+  align-items: center;
+  padding: 23px 0;
+  border-bottom: 1px solid #494949;
+}
+.expertise-facts .fact { min-width: 0; }
+.expertise-facts .fact-last { gap: var(--fact-gap); border: 0; padding-top: 30px; }
+@media (max-width: 1100px) { .expertise-facts { --fact-column: 90px; } }
 .updates {
   background-image: linear-gradient(90deg, rgb(18 18 18 / .72), rgb(18 18 18 / .78)), url('assets/red-gold-marble-banner.webp');
   color: var(--paper);
@@ -143,8 +162,8 @@ h1 em, h2 em, blockquote em {
   width: clamp(160px, 15vw, 220px);
   height: auto;
   margin: 30px 0 0;
-  padding: 16px;
-  background: var(--paper);
+  padding: 0;
+  background: transparent;
   object-fit: contain;
 }
 /* Focus stays visible on both paper and dark surfaces. */
@@ -185,9 +204,12 @@ a:focus-visible, button:focus-visible, summary:focus-visible, [tabindex]:focus-v
   .brand .brand-lockup { width: 240px; }
   .footer-brand .brand-lockup { width: 260px; }
   .header-inner { min-height: 86px; gap: 10px; }
+  /* Keep the Menu button inside the shared gutter at intermediate phone widths. */
+  .header-inner > .brand { min-width: 0; flex-shrink: 1; }
+  .header-inner > .menu-toggle { flex: none; }
   .menu-toggle { gap: 6px; padding: 8px; font-size: .8rem; }
   .smudge-newsletter { width: 160px; margin-top: 24px; }
-  .expertise-facts .fact-last { gap: 22px; }
+  .expertise-facts { --fact-column: 88px; --fact-gap: 22px; }
   .brand-mark-on-dark { width: 88px; }
 }
 @media (max-width: 360px) {

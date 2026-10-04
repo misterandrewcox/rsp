@@ -75,3 +75,13 @@ python -m http.server 5173. The actual forms retain their production destination
 For publishing, review the branch diff against the source baseline; retain CNAME,
 production robots.txt and canonical URLs. Historical brush assets are preserved
 for traceability but no page or active stylesheet references them.
+
+
+FOUNDER CORRECTION — OCTOBER 4, 2026
+The website's dark-surface treatment above is superseded by the founder's latest
+instruction: large emphasized heading words use #9B0000; smaller labels/subheaders
+may remain #F0D28D. Corporate marks and Smudge retain native transparency on quiet
+dark surfaces without paper/white tiles. The fact descriptions share one aligned
+column, and the experience metric is now 10 / years in publishing. Earlier claims
+about gold heading accents, paper backplates and the 9+ metric are historical.
+These local corrections are not evidence of a push or deployment.
