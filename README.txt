@@ -61,7 +61,9 @@ Verify real delivery to the Sheet and intended submission inbox separately.
 Editing and release
 Shared styling: style.css. Navigation and publishing-interest tabs: script.js.
 Form handling: forms.js. CSS/script URLs include content versions for caching.
-Hero artwork: assets/manhwa-hero-v2.webp.
+Hero artwork: assets/rsp-shared-story-hero-2026-10-19.webp.
+The shared-book illustration with gold and red hair was selected for publication
+by Andrew Cox on October 19, 2026. The previous hero asset remains for history.
 Signup texture: assets/red-gold-marble-banner.webp.
 The hero and texture are concept artwork generated for this website.
 Shopify integration remains a future phase.
